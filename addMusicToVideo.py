@@ -3,11 +3,11 @@ import os
 import time
 
 # Get the desired video title
-title = str("test")
+title = str("vid1")
 
 # Open the video and audio
-video_path = "D:\\08 Coding\\AI\\Youtube\\Content\\" + str(time.strftime("%Y-%m-%d")) + ".avi"
-music_path = "D:\\08 Coding\\AI\\Youtube\\Content\\music.mp3"
+video_path = "C:\\code\\content\\videos\\" + str(time.strftime("%Y-%m-%d")) + ".mp4"
+music_path = "C:\\code\\content\\musics\\music.mp3"
 video_clip = VideoFileClip(video_path)
 audio_clip = AudioFileClip(music_path)
 audio_final = audio_clip.audio_loop( audio_clip, duration=video_clip.duration)
@@ -16,4 +16,4 @@ audio_final = audio_clip.audio_loop( audio_clip, duration=video_clip.duration)
 final_clip = video_clip.set_audio(audio_final)
 
 # Export the final video with audio
-final_clip.write_videofile("D:\\08 Coding\\AI\\Youtube\\Content\\" + title + ".mp4")
+final_clip.write_videofile("C:\\code\\content\\videos\\" + str(time.strftime("%Y-%m-%d")) + ".mp4")
